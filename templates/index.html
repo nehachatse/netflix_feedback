@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Netflix Movie Feedback</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/netflix.png" alt="netflix" class="logo"/>
+
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <h3>User Name</h3>
+                <input type="text" name="user" placeholder="Name of netflix user" required/>   
+            </div>
+
+            <div class="form-group">
+                <h3>Movie Name</h3>
+                <input type="text" name="movie" placeholder="Name of netflix movie for feedback" required/>   
+            </div>
+
+            <div class="form-group">
+                <h3>Genres</h3>
+                <select name="genres">
+                    <option value="">Select Genres</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="horror">Horror</option>
+                    <option value="scifi">Sci-Fi</option>
+                    <option value="Romatic">Romantic</option>
+                    <option value="drama">Drama</option>
+                    <option value="anime">Anime</option>
+                    <option value="doc">Documentry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h3>Please rate the movie</h3>
+                <input type="radio" name="rating" value="1" />1
+                <input type="radio" name="rating" value="2" />2
+                <input type="radio" name="rating" value="3" />3
+                <input type="radio" name="rating" value="4" />4
+                <input type="radio" name="rating" value="5" checked/>5
+            </div>
+
+            <div class="form-group">
+                <h3>Comments</h3>
+                <textarea name="comments" id="" cols="30" rows="10" placeholder="Please share your view">
+                </textarea>
+            </div>
+            <input type="submit" value="submit" class="btn" />
+        </form>
+    </div>
+</body>
+</html>
